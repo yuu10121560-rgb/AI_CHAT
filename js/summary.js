@@ -93,7 +93,7 @@ export async function executeSummary() {
             levelInput.value = summaryLevel;
         }
 
-        const preserveTurns = 20;
+        const preserveTurns = 30;
         const preserveMessages = Math.min(preserveTurns * 2, state.chatMessages.length);
 
         let dialogueText = '';
