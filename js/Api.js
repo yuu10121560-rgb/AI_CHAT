@@ -264,7 +264,7 @@ export async function* sendToGeminiStream(prompt, history = [], systemInstructio
 
         try {
             const result = await chat.sendMessageStream(prompt, {
-                thinkingConfig: { thinkingBudget: 5000 }
+                thinkingConfig: { thinkingBudget: 6000 }
             });
             
             for await (const chunk of result.stream) {
@@ -318,3 +318,4 @@ console.log('  - resetTokenStats() : 통계 초기화\n');
 console.log('🛡️ Safety Settings: OFF (모든 필터 비활성화)\n');
 console.log('⚠️ 안전 설정은 Api.js의 SAFETY_SETTINGS에서 변경할 수 있습니다.');
 console.log('💡 각 사용자는 자신의 API 키로 책임있게 사용해주세요.\n');
+
